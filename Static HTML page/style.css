@@ -63,6 +63,12 @@ nav > li {
     width: fit-content;
 
 }
+img {
+    width: 100%;
+    height: auto;
+}
+
+
 
 .article-listing > div > div {
     display: flex;
