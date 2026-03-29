@@ -1,0 +1,241 @@
+
+
+
+body {
+    background-color: #232830;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: content-box;
+    align-items: center;
+    
+    
+   
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+.container {
+    margin: 2rem;
+    margin-top: 100px;
+    max-width: 1244px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    scrollbar-width: none;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 10em;
+    padding-right: 10em;
+    background-color: #2328304c;
+    backdrop-filter: blur(10px); /* Adjust the blur radius (e.g., 5px, 15px) */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+nav > li {
+    font-family: monospace;
+    margin-right: 20px;
+}
+
+.article-listing > div{
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 22px;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.article-listing > div > p:first-of-type{
+    font-weight: 800;
+
+}
+
+.article-listing > div > svg {
+    width: fit-content;
+
+}
+
+.article-listing > div > div {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.article-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.title {
+    color: #FF7575;
+    font-family: Lucida;
+    font-weight: 400px;
+    font-size: 71px;
+    font-style: italic;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    column-gap: 10px;
+    
+}
+
+nav > ul > li:first-child {
+    margin-right: auto;
+}
+
+nav > ul > li {
+    text-decoration: none;
+    list-style: none;
+}
+.page-header {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.hero-section {
+    display: flex;
+    /* background-color: purple; */
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.subtext {
+    margin: 0;
+    font-weight: 400px;
+    font-size: 29px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.category-listing {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-family: monospace;
+    position: relative;
+    border-top: solid;
+    border-top-color: #4d4d4d4a;
+    border-top-width: 1px;
+    
+    
+    
+    
+}
+
+.category-listing::after {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
+     content: "";
+  position: absolute;
+  top: 0;
+  right: 0;           /* Pins it to the right edge of the visible area */
+  
+  width: 80px;        /* Only covers the last 80px of the container */
+  height: 100%;       /* Matches the height of your paragraphs */
+  
+  /* The "Fading" Magic */
+  background: linear-gradient(to right, transparent, #232830);
+  
+  pointer-events: none; /* VERY IMPORTANT: lets you click/scroll "through" the fade */
+  z-index: 10;      /*through the fade */
+    /* height: auto;
+    width: 100px;
+    background-color: green; */
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5em;
+    margin: 1em;
+    font-style: italic;
+    color: #909090;
+    text-align: center;
+}
+
+.pagination > span {
+    color: #FF7575;
+    border-top-width: 1px;
+    border-top: solid;
+    border-top-color: #FF7575;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    gap: 2rem;
+    
+
+}
+
+.footer > div {
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer > div > span, .following{
+    background-color: #4699E0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.2rem;
+    border-radius: 10px;
+    
+}
+
+.small-screen {
+    display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    .big-screen {
+        display: none;
+    }
+    .small-screen {
+        display: block;
+        justify-content: end;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        
+        
+    }
+
+    nav > ul > li:first-child {
+        margin-right: auto;
+    }
+
+    
+}
+
+
+
