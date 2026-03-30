@@ -7,21 +7,22 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    
+    display: flex;
     align-items: center;
+    justify-content: center;
     
     
    
 }
 
-/* body::-webkit-scrollbar {
-    display: none;
-} */
+
 
 .container {
-    margin: 2rem;
+    margin: 1rem;
     margin-top: 100px;
-    max-width: 1244px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     row-gap: 60px;
@@ -68,6 +69,10 @@ img {
     height: auto;
 }
 
+/* .article-listing {
+    max-width: 600px;
+} */
+
 
 
 .article-listing > div > div {
@@ -79,13 +84,13 @@ img {
 .article-listing {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 1rem;
 }
 
 .title {
     color: #FF7575;
     font-family: Lucida;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 71px;
     font-style: italic;
     line-height: 100%;
@@ -128,7 +133,7 @@ nav > ul > li {
 
 .subtext {
     margin: 0;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 29px;
     line-height: 100%;
     letter-spacing: 0;
@@ -206,14 +211,23 @@ nav > ul > li {
 
 .footer > div {
     display: flex;
+    gap: 1rem;
     align-items: center;
     
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
 }
 
 .footer > div > span, .following{
     background-color: #4699E0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
     
 }
@@ -232,7 +246,7 @@ nav > ul > li {
         justify-content: end;
         padding-left: 3rem;
         padding-right: 3rem;
-        
+        z-index: 999;
         
     }
 
@@ -240,8 +254,18 @@ nav > ul > li {
         margin-right: auto;
     }
 
+    .footer {
+        flex-direction: column;
+    }
+
     
 }
 
+@media (min-width: 768px) {
+    .container {
+        margin: 7rem auto; /* "auto" centers the container horizontally */
+        margin-top: 100px;
+    }
+}
 
 
